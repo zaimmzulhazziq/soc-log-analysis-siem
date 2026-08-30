@@ -1,28 +1,27 @@
-# SOC Log Analysis & SIEM Project
+# SOC Alert Triage & Log Analysis Project
 
 ## 🎯 Objective
-Practice a core SOC L1 skill: ingest raw logs into a SIEM, write detection rules/searches to spot suspicious activity, and document findings the way a real analyst would report them.
+Practice a core SOC L1 skill: investigate real security alerts in a SIEM/EDR environment, analyse the underlying logs and indicators, and document findings the way a real analyst would report them to their team lead.
 
-## 🛠️ Tools & Dataset
-- **SIEM:** [Wazuh](https://wazuh.com/) (free, open-source SIEM/XDR) — deployed locally via Docker (single-node stack: indexer + manager + dashboard)
-- **Dataset:** Public security log samples from [SecRepo](https://www.secrepo.com/) (Apache access logs with scan/attack traffic) — no real/private data used.
+## 🛠️ Platform
+- **[LetsDefend](https://letsdefend.io/)** (free tier) — a browser-based blue team training platform used by SOC training programs worldwide. Provides a real SIEM/EDR-style dashboard with live alerts to investigate, without needing to deploy any infrastructure locally.
 
 ## 📋 Steps
-1. Install Docker Desktop and deploy the Wazuh single-node Docker stack locally.
-2. Log in to the Wazuh dashboard and get familiar with the interface.
-3. Ingest the sample log dataset for analysis.
-4. Write searches/rules in the Wazuh dashboard to detect:
-   - Repeated failed requests / brute-force-like patterns
-   - Suspicious user agents (scanners, known attack tools)
-   - Possible SQL injection or path traversal attempts in request strings
-   - Unusual spikes in error status codes (4xx/5xx)
-5. Build one simple dashboard panel summarizing the top findings.
-6. Document findings, screenshots, and lessons learnt below.
+1. Create a free account at letsdefend.io.
+2. Explore the Monitoring page / SOC dashboard to get familiar with the interface (alert queue, log viewer, case management).
+3. Pick 2–3 free alerts and investigate each one:
+   - What triggered the alert?
+   - What do the related logs / endpoint data show?
+   - Is it a true positive or false positive?
+   - What IOCs (IPs, hashes, domains) are involved?
+4. For each investigated alert, write it up as a mini incident report (see docs/SETUP_GUIDE.md for the template).
+5. Take screenshots of the dashboard and your investigation steps.
+6. Document overall findings and lessons learnt below.
 
 See [docs/SETUP_GUIDE.md](docs/SETUP_GUIDE.md) for the full step-by-step walkthrough.
 
 ## 🔍 Findings
-> 🚧 To be filled in after hands-on analysis.
+> 🚧 To be filled in after hands-on investigation.
 
 ## 📸 Screenshots
 > 🚧 To be added.
